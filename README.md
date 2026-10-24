@@ -4,8 +4,8 @@ I build product-focused, security-conscious full-stack applications, with a part
 
 ## What I'm working on
 
-- **CareTwin AI** — a private, source-linked longitudinal health-record review application built with FastAPI, React, synthetic FHIR data, provenance, and explicit safety controls.
-- **[Nearloom](https://github.com/TarunSharma0007/Nearloom)** — a CaaS application.
+- **CareTwin AI** — a private, source-linked longitudinal health-record review application built with FastAPI, React, synthetic FHIR data, provenance, and explicit safety controls. **[Open the live synthetic demo](https://tarunsharma0007.github.io/TarunSharma0007/)**
+- **[Nearloom](https://github.com/TarunSharma0007/Nearloom)** — a location-aware community discovery platform built with React, TypeScript, and Supabase.
 
 ## Technical focus
 
