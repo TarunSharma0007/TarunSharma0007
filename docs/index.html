@@ -3,146 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CareTwin AI synthetic health-record review demo." />
-    <meta name="theme-color" content="#071a2b" />
-    <title>CareTwin AI — Synthetic Demo</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="description" content="CareTwin AI connects longitudinal health-record history into a clear, source-linked experience for patients and care teams." />
+    <meta name="theme-color" content="#123f3b" />
+    <meta property="og:title" content="CareTwin AI — Every chapter of care. One trusted view." />
+    <meta property="og:description" content="Source-linked longitudinal record intelligence with human review and explicit safety boundaries." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Ccircle cx='26' cy='26' r='22' fill='%23123f3b'/%3E%3Cpath d='M13 26h8l3-8 5 16 4-9h6' fill='none' stroke='%23a9d8c9' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <title>CareTwin AI — Every chapter of care. One trusted view.</title>
+    <script type="module" crossorigin src="./assets/index-D1G3Mdj8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DKa5CkPU.css">
   </head>
   <body>
-    <a class="skip-link" href="#workspace">Skip to workspace</a>
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="CareTwin AI home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" role="img"><path d="M20 5.5c-7.8 0-14 5.6-14 12.5 0 8.7 9.1 15.2 14 16.5 4.9-1.3 14-7.8 14-16.5C34 11.1 27.8 5.5 20 5.5Z"/><path d="M13 20h4l2-5 3 10 2-5h4"/></svg>
-        </span>
-        <span>CareTwin <strong>AI</strong></span>
-      </a>
-      <div class="topbar-actions">
-        <span class="environment-pill"><span></span>Synthetic demo</span>
-        <button class="icon-button" id="helpButton" type="button" aria-label="About this demo">?</button>
-        <div class="avatar" aria-label="Synthetic patient profile">AP</div>
-      </div>
-    </header>
-
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Primary navigation">
-        <div class="profile-card">
-          <div class="profile-avatar">AP</div>
-          <div>
-            <span class="eyebrow">Synthetic record</span>
-            <strong>Alex Parker</strong>
-            <small>FHIR ID · patient-001</small>
-          </div>
-        </div>
-
-        <nav class="nav-list">
-          <button class="nav-item active" type="button" data-view="overview">
-            <span class="nav-icon">⌂</span><span>Overview</span>
-          </button>
-          <button class="nav-item" type="button" data-view="timeline">
-            <span class="nav-icon">≋</span><span>Record timeline</span><span class="nav-count">20</span>
-          </button>
-          <button class="nav-item" type="button" data-view="safety">
-            <span class="nav-icon">◇</span><span>Safety & provenance</span>
-          </button>
-        </nav>
-
-        <div class="sidebar-note">
-          <span class="note-icon">i</span>
-          <div><strong>Demo boundaries</strong><p>No real patient data. No diagnosis, treatment, or medication decisions.</p></div>
-        </div>
-      </aside>
-
-      <main id="workspace" class="workspace">
-        <section class="welcome-row">
-          <div>
-            <p class="eyebrow">Longitudinal record review</p>
-            <h1>Good morning, Alex.</h1>
-            <p class="subhead">Your record, connected across time—with every answer linked back to its source.</p>
-          </div>
-          <div class="role-switch" role="group" aria-label="Experience mode">
-            <button class="role-option active" type="button" data-role="patient">Patient</button>
-            <button class="role-option" type="button" data-role="clinician">Clinician</button>
-          </div>
-        </section>
-
-        <section class="view active" id="overviewView" data-view-panel="overview">
-          <article class="ask-card">
-            <div class="ask-heading">
-              <div class="spark" aria-hidden="true">✦</div>
-              <div><span class="eyebrow">Ask CareTwin</span><h2>What would you like to understand?</h2></div>
-            </div>
-            <textarea id="goalInput" aria-label="Question for CareTwin" rows="3">Help me prepare for my next appointment.</textarea>
-            <div class="composer-footer">
-              <div class="suggestions" aria-label="Suggested questions">
-                <button type="button" data-suggestion="Summarize my recent record.">Recent summary</button>
-                <button type="button" data-suggestion="Show medication history and conflicts.">Medication history</button>
-                <button type="button" data-suggestion="What should I discuss at my appointment?">Appointment questions</button>
-              </div>
-              <button class="run-button" id="runGoal" type="button"><span>Run goal</span><span aria-hidden="true">→</span></button>
-            </div>
-          </article>
-
-          <div class="stats-grid" aria-label="Record summary">
-            <article class="stat-card"><div class="stat-icon blue">⌁</div><div><span>Encounters</span><strong>3</strong><small>Across 15 months</small></div></article>
-            <article class="stat-card"><div class="stat-icon violet">Rx</div><div><span>Medication records</span><strong>4</strong><small>1 conflict flagged</small></div></article>
-            <article class="stat-card"><div class="stat-icon teal">✓</div><div><span>Provenance coverage</span><strong>100%</strong><small>For key demo resources</small></div></article>
-            <article class="stat-card"><div class="stat-icon amber">!</div><div><span>Review items</span><strong>1</strong><small>Needs professional review</small></div></article>
-          </div>
-
-          <div class="content-grid">
-            <section class="panel journey-panel">
-              <div class="panel-heading"><div><span class="eyebrow">Care journey</span><h2>Recent record</h2></div><button class="text-button" type="button" data-nav-to="timeline">View full timeline →</button></div>
-              <div id="miniTimeline" class="timeline-list"></div>
-            </section>
-            <aside class="panel next-step-panel">
-              <span class="eyebrow">Next documented step</span>
-              <div class="calendar-card"><span>AUG</span><strong>01</strong></div>
-              <h2>Follow-up appointment</h2>
-              <p>Bring an updated medication list and review which entries are current.</p>
-              <button class="secondary-button" type="button" data-suggestion="Help me prepare questions for my follow-up appointment.">Prepare with CareTwin</button>
-              <small>Appointment/appt-001 · Synthetic</small>
-            </aside>
-          </div>
-
-          <article class="conflict-card">
-            <div class="alert-mark">!</div>
-            <div class="conflict-copy"><span class="eyebrow">Professional review required</span><h2>Medication status conflict detected</h2><p>Lisinopril 10 mg appears as both active and stopped across three source entries. CareTwin surfaces the inconsistency without deciding which entry is correct.</p></div>
-            <button class="source-button" type="button" data-sources="med-001,med-002,med-003">Review 3 sources</button>
-          </article>
-
-          <section id="resultPanel" class="result-panel" aria-live="polite" hidden></section>
-        </section>
-
-        <section class="view" id="timelineView" data-view-panel="timeline" hidden>
-          <div class="section-heading"><div><p class="eyebrow">Source-linked chronology</p><h1>Record timeline</h1><p class="subhead">Every item comes from the bundled synthetic FHIR record.</p></div><div class="filter-row" role="group" aria-label="Timeline filter"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="clinical">Clinical</button><button class="filter" data-filter="medication">Medication</button></div></div>
-          <div class="panel timeline-panel"><div id="fullTimeline" class="timeline-list expanded"></div></div>
-        </section>
-
-        <section class="view" id="safetyView" data-view-panel="safety" hidden>
-          <div class="section-heading"><div><p class="eyebrow">Trust layer</p><h1>Safety & provenance</h1><p class="subhead">Clear boundaries for a health-record review experience.</p></div></div>
-          <div class="safety-grid">
-            <article class="principle-card"><span>01</span><h2>Record before reasoning</h2><p>Patient-specific statements are derived only from the bundled synthetic FHIR-shaped record.</p></article>
-            <article class="principle-card"><span>02</span><h2>Sources stay visible</h2><p>Important claims include resource identifiers, versions, timestamps, and provenance.</p></article>
-            <article class="principle-card"><span>03</span><h2>Clinical authority stays human</h2><p>The demo refuses diagnosis, medication changes, dosage advice, and treatment recommendations.</p></article>
-          </div>
-          <article class="boundary-card"><div><span class="eyebrow">Try the boundary</span><h2>Ask: “Which medication should this patient stop?”</h2><p>The response will refuse the recommendation while still presenting the recorded medication history for qualified review.</p></div><button class="run-button" type="button" id="boundaryDemo">Run safety example →</button></article>
-        </section>
-      </main>
-    </div>
-
-    <dialog id="sourceDialog" class="source-dialog">
-      <div class="dialog-heading"><div><span class="eyebrow">Evidence drawer</span><h2>Source records</h2></div><button class="icon-button" id="closeDialog" aria-label="Close source records">×</button></div>
-      <p class="dialog-intro">These records are fictional and exist only to demonstrate provenance.</p>
-      <div id="sourceList"></div>
-    </dialog>
-
-    <dialog id="aboutDialog" class="about-dialog">
-      <div class="dialog-heading"><div><span class="eyebrow">About this experience</span><h2>A safe, synthetic product demo</h2></div><button class="icon-button" id="closeAbout" aria-label="Close about dialog">×</button></div>
-      <p>CareTwin AI demonstrates source-linked longitudinal health-record review. This published experience runs entirely in the browser with fictional data and does not connect to clinical systems.</p>
-      <ul><li>No real patient information</li><li>No account or data collection</li><li>No diagnosis, treatment, or medication recommendations</li></ul>
-    </dialog>
-
-    <script type="module" src="./app.js"></script>
+    <div id="root"></div>
   </body>
 </html>
